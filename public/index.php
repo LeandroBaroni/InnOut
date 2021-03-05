@@ -4,4 +4,6 @@ require_once(dirname(__FILE__, 2) . '/src/models/User.php');
 
 $user = new User(['name' => 'Lucas', 'email' => 'lucas@gmail.com']);
 print_r($user);
-echo 'FIM';
+echo '<hr>';
+print_r($user->email);
+echo '<br>FIM';
