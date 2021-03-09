@@ -1,8 +1,17 @@
 <IfModule mod_rewrite.c>
+<<<<<<< HEAD
     RewriteEngine On
     RewriteBase /
     RewriteRule ^index\.php$ - [L]
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule . /index.php [L]
+=======
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . / [L]
+>>>>>>> 1b1d713b6aad9122cdd5f44e6393890299e429d5
 </IfModule>
