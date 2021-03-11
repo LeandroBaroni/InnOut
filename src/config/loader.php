@@ -24,12 +24,8 @@ function loadTemplateView($viewName, $params = array()){
         }
     }
 
-<<<<<<< HEAD
     require_once(TEMPLATE_PATH . "/header.php");
     require_once(TEMPLATE_PATH . "/left.php");
     require_once(VIEW_PATH . "/{$viewName}.php");
     require_once(TEMPLATE_PATH . "/footer.php");
-=======
-    require_once(VIEW_PATH . "/{$viewName}.php");
->>>>>>> 1b1d713b6aad9122cdd5f44e6393890299e429d5
 }
