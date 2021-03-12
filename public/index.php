@@ -7,7 +7,12 @@ $uri = urldecode(
 );
 
 if($uri === '/' || $uri === '' || $uri === '/index.php'){
-    $uri = '/loginController.php';
+    $uri = '/login.php';
 }
 
-require_once(CONTROLLER_PATH . "{$uri}");
+//Assim funciona
+//require_once(CONTROLLER_PATH . '/day_records.php');
+//abaixo não redireciona para o arquivo acima
+
+//echo CONTROLLER_PATH . "/{$uri}";
+require_once(CONTROLLER_PATH . "/{$uri}");

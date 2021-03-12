@@ -16,9 +16,9 @@ function loadView($viewName, $params = array()){
 }
 
 function loadTemplateView($viewName, $params = array()){
-    if(count($params) > 0){
-        foreach($params as $key => $value){
-            if(strlen($key) > 0){
+    if(count($params) > 0) {
+        foreach($params as $key => $value) {
+            if(strlen($key) > 0) {
                 ${$key} = $value;
             }
         }
