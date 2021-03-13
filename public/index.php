@@ -7,7 +7,7 @@ $uri = urldecode(
 );
 
 if($uri === '/' || $uri === '' || $uri === '/index.php'){
-    $uri = '/login.php';
+    $uri = '/day_records.php';
 }
 
 //Assim funciona
