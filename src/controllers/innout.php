@@ -11,10 +11,7 @@ try{
     if($_POST['forcedTime']) {
         $currentTime = $_POST['forcedTime'];
     }
-    echo $currentTime . '<br>';
-    echo '5<br>';
     $records->innout($currentTime);
-    echo '6<br>';
     addSuccessMsg('Ponto inserido com sucesso!');
 }catch(AppException $e){
     addSuccessMsg($e->getMessage());

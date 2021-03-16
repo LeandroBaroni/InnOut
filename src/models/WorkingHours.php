@@ -48,34 +48,26 @@ class WorkingHours extends Model {
 
     public function innout($time) {
         $timeColumn = $this->getNextTime();
-        echo $timeColumn . '<br>';
         if(!$timeColumn) {
-            echo 'very sad<br>';
             throw new AppException("Você já fez os 4 batimentos do dia!");
         }
-        echo 'sad<br>';
+        // echo '123';
         $this->$timeColumn = $time;
-        echo $this->getWorkedInterval() . '<hr>';
-        echo 'humm<br>';
-        $this->worked_time = getSecondsFromDateInterval($this->getWorkedInterval());
-        echo '23<br>';
+        // echo '  ahas';
+        // $this->worked_time = getSecondsFromDateInterval($this->getWorkedInterval());
+        // echo '   ads';
         if($this->id) {
-            echo 'update<br>';
             $this->update();
         } else {
-            echo 'insert<br>';
             $this->insert();
         }
     }
 
     function getWorkedInterval() {
-        echo $this->getTimes();
-        echo '312';
         [$t1, $t2, $t3, $t4] = $this->getTimes();
-        echo 'ejhj';
+
         $part1 = new DateInterval('PT0S');
         $part2 = new DateInterval('PT0S');
-        echo 'dkndsk';
         if($t1) $part1 = $t1->diff(new DateTime());
         if($t2) $part1 = $t1->diff($t2);
         if($t3) $part2 = $t3->diff(new DateTime());
