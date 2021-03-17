@@ -54,7 +54,7 @@ class WorkingHours extends Model {
         // echo '123';
         $this->$timeColumn = $time;
         // echo '  ahas';
-        // $this->worked_time = getSecondsFromDateInterval($this->getWorkedInterval());
+        $this->worked_time = getSecondsFromDateInterval($this->getWorkedInterval());
         // echo '   ads';
         if($this->id) {
             $this->update();

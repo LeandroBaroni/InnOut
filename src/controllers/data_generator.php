@@ -53,9 +53,7 @@ function populateWorkingHours($userId, $initialDate, $regularRate, $extraRate, $
         if(!isWeekend($currentDate)) {
             $template = getDayTemplateByOdds($regularRate, $extraRate, $lazyRate);
             $columns = array_merge($columns, $template);
-            print_r($columns);
             $workingHours = new WorkingHours($columns);
-            echo 'aaab<br>';
             $workingHours->insert();
         }
         $currentDate = getNextDay($currentDate)->format('Y-m-d');

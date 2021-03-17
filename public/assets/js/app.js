@@ -7,11 +7,11 @@
     }
 })()
 
-function activateClock(){
+function activateClock() {
     const activeClock = document.querySelector('[active-clock]')
     if(!activeClock) return
 
-    function addOneSecond(hours, minutes, seconds){
+    function addOneSecond(hours, minutes, seconds) {
         const d = new Date()
         d.setHours(parseInt(hours))
         d.setMinutes(parseInt(minutes))
@@ -23,8 +23,9 @@ function activateClock(){
     
         return `${h}:${m}:${s}`
     }
-    
-    setInterval(function(){
+
+    setInterval(function() {
+        // '07:27:19' => ['07', '27', '19']
         const parts = activeClock.innerHTML.split(':')
         activeClock.innerHTML = addOneSecond(...parts)
     }, 1000)

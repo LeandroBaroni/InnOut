@@ -74,7 +74,6 @@ class Model {
             $sql .= static::getFormatedValue($this->$col) . ",";
         }
         $sql[strlen($sql) - 1] = ')';
-        echo $sql . '<br>';
         $id = Database::executeSQL($sql);
         $this->id = $id;
     }
