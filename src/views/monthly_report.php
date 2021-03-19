@@ -10,7 +10,7 @@
     <div>
         <form action="#" class="mb-4" method="post">
             <div class="input-group">
-                <?php if($user->id_admin): ?>
+                <?php if($user->is_admin): ?>
                 <select name="user" class="form-control mr-2" placeholder="Selecione o funcionário">
                     <option value="" class="">Selecione o usuário</option>
                     <?php
